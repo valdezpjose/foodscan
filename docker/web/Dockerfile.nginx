@@ -1,0 +1,7 @@
+FROM nginx:alpine
+WORKDIR /var/www/html
+
+# Copia config de nginx
+COPY docker/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+# Copia el código (no hay volumes en Railway)
+COPY . /var/www/html
